@@ -1166,6 +1166,12 @@ string YulUtilFunctions::arrayLengthFunction(ArrayType const& _type)
 							length := <extractByteArrayLength>(length)
 						</byteArray>
 					</storage>
+					<?transient>
+						length := tload(value)
+						<?byteArray>
+							length := <extractByteArrayLength>(length)
+7						</byteArray>
+					</transient>
 					<?calldata>
 						length := len
 					</calldata>
