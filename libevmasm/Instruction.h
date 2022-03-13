@@ -103,8 +103,6 @@ enum class Instruction: uint8_t
 	MSIZE,				///< get the size of active memory
 	GAS,				///< get the amount of available gas
 	JUMPDEST,			///< set a potential jump destination
-	TLOAD,
-	TSTORE,
 
 	PUSH1 = 0x60,		///< place 1 byte item on stack
 	PUSH2,				///< place 2 byte item on stack
@@ -178,6 +176,9 @@ enum class Instruction: uint8_t
 	LOG2,				///< Makes a log entry; 2 topics.
 	LOG3,				///< Makes a log entry; 3 topics.
 	LOG4,				///< Makes a log entry; 4 topics.
+
+	TLOAD = 0xb3,
+	TSTORE = 0xb4,
 
 	CREATE = 0xf0,		///< create a new account with associated code
 	CALL,				///< message-call into an account
